@@ -52,7 +52,7 @@ the instructions in the following sections.
 5. Change Chrome to Developer mode on the top right
 6. Click `load unpacked` to the top left
 7. Select the downloaded `build` folder
-8. The tool should now appear in your extension menu in chrome
+8. The tool should now appear in your extension menu in Chrome
 
 ## Building manually for Firefox
 
@@ -76,6 +76,30 @@ the instructions in the following sections.
 6. Select `This Firefox` in the top left
 7. Select `Load Temporary Add-on`
 9. Upload `build/manifest.json`
-10. The tool should now appear in your extension menu in chrome
+10. The tool should now appear in your extension menu in Firefox
 
 See this [Firefox installation demo](./public/firefox-demo-v1.3.gif).
+
+## Getting started with development
+
+If you are adding new features or making any changes, please follow this guide to make your development process as smooth as possible.
+
+1. Create an issue that describes the change you want to make
+2. Fork the repository onto your personal GitHub profile
+3. Create a new branch with the name of the changes you're looking to make
+4. Clone the fork to your local machine and check out the branch you're making changes on
+5. Navigate to the root directory and install dependencies:
+   ```bash
+   yarn install
+   ```
+6. Run the formatter to standardize your formatting:
+   ```bash
+   yarn fmt-fix 
+   ```
+7. Build the project:
+   ```bash
+   yarn run build
+   ```
+8. Test out your feature and make sure that it doesn't break core functionality
+9. Push your changes to the remote branch on your fork
+10. Create a pull request to the develop branch in the main repository
